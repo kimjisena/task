@@ -7,12 +7,10 @@ import getResult from '@/utils';
 import { useState, useEffect } from 'react';
 import ProductCard from '@/components/ProductCard';
 import MainLayout, {type Product} from '@/components/layout/MainLayout';
-import Home from '@/components/Home';
-
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Index() {
+export default function Home() {
   const [result, setResult] = useState<null | Array<Product>>(null);
 
   useEffect(() => {
@@ -33,7 +31,7 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainLayout page='home' res={result} />
+      <MainLayout page='cart' res={null} />
     </>
   )
 }
